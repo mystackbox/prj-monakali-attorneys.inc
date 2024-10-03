@@ -1,0 +1,19 @@
+/* include all _partials from the following directories: */
+/* global font size */
+/* global font color */
+/* global border radius */
+/* global Layouts gaps */
+/* global background color variables */
+/* global form controls - textbox */
+/* global form controls - placeholder */
+/* global form controls - error messages */
+/* bind the following _partials to scss/styles.scss */
+/*  Rest to default setting */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* include all _partials from the following directories: */
+
+/*# sourceMappingURL=styles.css.map */

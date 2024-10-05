@@ -10,6 +10,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    //for ngx-bootstrap carousel
+    CarouselModule.forRoot()
   ],
   providers: [
     provideClientHydration(), {

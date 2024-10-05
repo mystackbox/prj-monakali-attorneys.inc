@@ -27,10 +27,24 @@ body {
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
 /*  Site header */
+.header-container {
+  display: flexbox;
+  flex-direction: row;
+}
+.header-container .sitename-first-row {
+  font-weight: bold;
+  font-size: 24px;
+  color: brown;
+}
+.header-container .sitename-second-row {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
 .navbar {
-  padding: 0px;
+  padding: 5px 0 5px 0;
 }
 .navbar .nav-item {
   margin-right: 10px;
@@ -92,7 +106,6 @@ body {
 /* Header Grid Area */
 .header-container {
   grid-area: header;
-  display: grid;
 }
 
 /* Carousel Grid Area */
@@ -137,6 +150,15 @@ body {
 /* You can add global styles to this file, and also import other style files */
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
+.carousel-container .responsive {
+  width: 100%;
+  height: auto;
+}
+.carousel-container .carousel-img {
+  display: block;
+  width: 100%;
+}
+
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
 /* include all _partials from the following directories: */

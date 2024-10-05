@@ -20,7 +20,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
 }
 
@@ -51,6 +51,7 @@ body {
   padding-right: 0px;
 }
 .navbar .nav-link {
+  padding: 7px 0px 7px 0px;
   color: lightgray;
 }
 .navbar .nav-link:hover {
@@ -124,6 +125,7 @@ body {
   /* Sidebar Grid Area */
 }
 .page-content-container .page-content-main {
+  background-color: #fff;
   grid-area: page-content-main;
 }
 .page-content-container .sidebar-container {
@@ -133,6 +135,14 @@ body {
 /*   Footer Grid Area */
 .footer-container {
   grid-area: footer;
+}
+
+/* Site signature */
+.signature {
+  text-align: center;
+  color: grey;
+  background-color: #f8f9fa;
+  padding: 15px;
 }
 
 /*   Medium screens, laptops  */
@@ -150,6 +160,58 @@ body {
 /* You can add global styles to this file, and also import other style files */
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
+/*  Site footer */
+.footer-wrapper {
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.footer-wrapper .footer-item {
+  font-size: 16px;
+  color: lightgray;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.footer-wrapper .footer-item .footer-item-header {
+  font-weight: bold;
+  color: brown;
+  font-size: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.footer-wrapper .footer-item .footer-item-list {
+  color: grey;
+}
+.footer-wrapper .footer-item .footer-item-list ul {
+  margin-top: 7px;
+  margin-left: -32px;
+}
+.footer-wrapper .footer-item .footer-item-list ul li {
+  list-style: none;
+  font-size: 13px;
+}
+
+/*   Medium screens, laptops  */
+@media screen and (max-width: 601px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-wrapper .footer-item {
+    border-bottom: 1px solid lightgrey;
+  }
+  .footer-wrapper .footer-item-1, .footer-wrapper .footer-item-2 {
+    display: none;
+  }
+  .footer-wrapper .footer-item-3 {
+    order: 2;
+  }
+  .footer-wrapper .footer-item-4 {
+    order: 1;
+  }
+}
 .carousel-container .responsive {
   width: 100%;
   height: auto;

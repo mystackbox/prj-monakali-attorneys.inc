@@ -2,6 +2,7 @@
     Grid layout structure 
     Mobile-first approach
 */
+
 .master-page-grid { 
 
     margin: auto;
@@ -53,6 +54,7 @@
 
         /* Carousel Grid Area */
         .page-content-main {
+            background-color: #fff;
             grid-area: page-content-main;
         }
 
@@ -63,10 +65,17 @@
         }
 }
  
-
 /*   Footer Grid Area */
 .footer-container {
     grid-area: footer;
+}
+
+/* Site signature */
+.signature {
+    text-align: center;
+    color: grey;
+    background-color: #f8f9fa;
+    padding: 15px;
 }
 
 /*   Medium screens, laptops  */

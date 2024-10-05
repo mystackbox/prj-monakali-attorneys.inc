@@ -1,1 +1,44 @@
 @use '../abstracts' as *;
+
+//Navbar css
+.navbar {
+    padding: 0px;
+
+    .nav-item {
+        margin-right: 10px;
+        padding-right: 0px;
+    }
+
+    .nav-link {
+        color: lightgray;
+    }
+    
+    .nav-link:hover {
+        color: #fff;
+    }
+    .nav-link:focus {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+// ---- Navigation-bar break-point
+@media screen and (max-width: 575px) {
+    
+    .navbar-toggler  {  
+        border: none; 
+        padding-left: 0;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none; 
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    .nav-link {
+        border-top: 1px solid rgba(128,128,128, 0.3);
+        padding: 4px 0 2px 0;
+    }
+}
+
+

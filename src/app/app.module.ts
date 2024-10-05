@@ -3,19 +3,23 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './features/home/pages/home/home.component';
-import { AboutComponent } from './features/about/pages/about/about.component';
-import { ContactComponent } from './features/contact/pages/contact/contact.component';
-import { NotFoundComponent } from './features/not-found/pages/not-found/not-found.component';
-import { TeamComponent } from './features/team/pages/team/team.component';
-import { ServicesComponent } from './features/services/pages/services/services.component';
 import { MasterPageComponent } from './layout/master-page/master-page.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { SideBarComponent } from './layout/side-bar/side-bar.component';
+import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MasterPageComponent
+    MasterPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideBarComponent,
+    NavBarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

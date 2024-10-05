@@ -10,7 +10,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,19 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    FormsModule,
     //for ngx-bootstrap carousel
     CarouselModule.forRoot()
   ],
   providers: [
+    //carousel behavioural config
+    // { 
+    //   provide: CarouselConfig, useValue: { 
+    //                                         interval: 5000, 
+    //                                         noPause: false, 
+    //                                         showIndicators: true 
+    //                                       } 
+    // },
     provideClientHydration(), {
       provide: LocationStrategy,
       useClass: PathLocationStrategy,

@@ -1,4 +1,22 @@
-<carousel>
+
+<carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
+  <slide *ngFor="let slide of slides; let index=index">
+     <img [src]="slide.image" alt="image slide" class="carousel-img responsive">
+     
+     <div class="carousel-caption">
+        <h4>
+          {{slide.title}}
+        </h4>
+        <p class="d-none d-md-block">
+          {{slide.description}}
+        </p>
+     </div>
+
+  </slide>
+</carousel>
+
+<!-- <div>
+  <carousel>
     <slide>
       <img src="/assets/carousel-img/5.jpg" alt="first slide" class="carousel-img responsive">
       <div class="carousel-caption">
@@ -29,3 +47,4 @@
         </div>
       </slide>
   </carousel>
+</div> -->

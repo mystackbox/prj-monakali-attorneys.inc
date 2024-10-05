@@ -1,1 +1,89 @@
-/* ====== MasterPage Grid Layout ====== */
+/*  
+    Grid layout structure 
+    Mobile-first approach
+*/
+.master-page-grid { 
+
+    margin: auto;
+    max-width: 900px;
+
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto 1fr ;
+    grid-template-areas:"navbar"
+                        "header"
+                        "carousel"
+                        "main"
+                        "footer";
+
+    background-color: #fff;
+    height: 0vh;
+}
+
+.grid-area-common {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+/* Navbar Grid Area */
+.navbar-container {
+    grid-area: navbar;
+}
+
+/* Header Grid Area */
+.header-container {
+    grid-area: header;
+}
+
+/* Carousel Grid Area */
+.carousel-container {
+    grid-area: carousel;
+}
+
+/* Page Main Area */
+.page-content-container {
+    grid-area: main; 
+    display: grid;
+    gap: 2px;
+    grid-template-rows:1fr;
+    grid-template-areas: 
+                        "page-content-main"
+                        "page-content-sidebar";
+
+        /* Carousel Grid Area */
+        .page-content-main {
+            grid-area: page-content-main;
+        }
+
+        /* Sidebar Grid Area */
+        .sidebar-container {
+            grid-area: page-content-sidebar; 
+
+        }
+}
+ 
+
+/*   Footer Grid Area */
+.footer-container {
+    grid-area: footer;
+}
+
+/*   Medium screens, laptops  */
+@media screen and (min-width: 768px){
+    
+    /*  Large screens - Grid Layout areas */
+     .master-page-grid { 
+         grid-template-areas:"navbar "
+                             "header "
+                             "carousel "
+                             "main"
+                             "footer";
+     } 
+
+     .page-content-container { 
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:"page-content-main page-content-sidebar";
+    }
+
+ }

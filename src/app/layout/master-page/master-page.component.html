@@ -1,4 +1,33 @@
-<h3>master-page works!</h3>
-<div class="page-main-contant">
-    <router-outlet></router-outlet>
-</div>
+    <div class=" master-page-grid site-container">
+
+        <section class="navbar-container">
+            <app-nav-bar></app-nav-bar>
+        </section>
+    
+        <header class="header-container grid-area-common">
+            <app-header></app-header>
+        </header>
+    
+        <section class="carousel-container grid-area-common">
+            <app-carousel></app-carousel>
+        </section>
+    
+        <section class="page-content-container">
+            
+            <section class="page-content-main grid-area-common">
+                <router-outlet></router-outlet>
+            </section>
+    
+            <section class="sidebar-container grid-area-common">
+                <app-side-bar></app-side-bar>
+            </section>
+            
+        </section>
+    
+        
+        <footer class="footer-container grid-area-common bg-body-secondary">
+            <app-footer></app-footer>
+        </footer>
+    
+    </div>
+

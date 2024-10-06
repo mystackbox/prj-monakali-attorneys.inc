@@ -16,7 +16,7 @@
         row-gap: 5px;
 
         .footer-item-header {
-            font-weight: bold;
+            // font-weight: bold;
             color: brown;
             font-size: 12px; 
             padding-bottom: 10px; 
@@ -45,11 +45,6 @@
 @media screen and (max-width: 601px){
     .footer-wrapper {
         flex-direction: column;
-
-        .footer-item {
-            border-bottom: 1px solid lightgrey;
-        }
-
         .footer-item-1, .footer-item-2 {
             display: none;
         }

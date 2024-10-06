@@ -78,6 +78,15 @@
     padding: 15px;
 }
 
+
+/*   Medium screens, laptops  */
+@media screen and (max-width: 766px){
+
+    .sidebar-container {
+        display: none; 
+    }
+ }
+
 /*   Medium screens, laptops  */
 @media screen and (min-width: 768px){
     
@@ -93,6 +102,10 @@
      .page-content-container { 
         grid-template-columns: 3fr 1fr;
         grid-template-areas:"page-content-main page-content-sidebar";
+    }
+
+    .signature .social-buttons {
+        display: none;
     }
 
  }

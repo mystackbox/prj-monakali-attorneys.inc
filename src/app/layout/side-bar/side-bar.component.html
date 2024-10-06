@@ -1,12 +1,31 @@
-<div class="list-group list-group-flush">
-    <a routerLink="/" class="list-group-item bg-body-secondary">SIDEBAR</a>
-    <a routerLink="/" class="list-group-item">First item</a>
-    <a routerLink="/" class="list-group-item">Second item</a>
-    <a routerLink="/" class="list-group-item">Third item</a>
+
+
+<div class="side-bar-wrapper">
+  <div class="list-group list-group-flush side-bar-item">
+    <a routerLink="/" class="list-group-item bg-body-secondary">
+      <fa-icon [icon]="['fas', 'scale-balanced']"></fa-icon> OUR SERVICES</a>
+    <a routerLink="/" class="list-group-item">Commercial Law</a>
+    <a routerLink="/" class="list-group-item">Family Law</a>
+    <a routerLink="/" class="list-group-item">Labour Law</a>
   </div>
-  <br/>
-  <div class="list-group list-group-flush">
-    <a routerLink="/" class="list-group-item">First item</a>
-    <a routerLink="/" class="list-group-item">Second item</a>
-    <a routerLink="/" class="list-group-item">Third item</a>
+
+  <div class="list-group list-group-flush side-bar-item">
+    <a routerLink="/" class="list-group-item bg-body-secondary">
+      <fa-icon [icon]="['fas', 'square-phone']"></fa-icon> COTANT DETAILS</a>
+    <a routerLink="/" class="list-group-item">(+27)71 913-2174</a>
+    <a routerLink="/" class="list-group-item">info&#64;monakaliattorneys.co.za</a>
+    <a routerLink="/" class="list-group-item">
+      <div class="d-grid gap-2">
+        <button class="btn btn-danger btn-sm" type="button"> Contact us today </button>
+      </div>
+    </a>
   </div>
+
+  <div class="list-group list-group-flush side-bar-item">
+      <!-- <app-ngx-share-buttons></app-ngx-share-buttons> -->
+      <div class="social-buttons-aligner slide-up">
+        <app-social-media-buttons></app-social-media-buttons>
+    </div>
+  </div>
+</div>
+

@@ -10,8 +10,15 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule } from '@angular/forms';
+
+//for font-awesome
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { SharethisAngularModule } from 'sharethis-angular';
+import { SocialMediaButtonsComponent } from './components/social-media-buttons/social-media-buttons.component';
 
 @NgModule({
   declarations: [
@@ -21,24 +28,21 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     SideBarComponent,
     NavBarComponent,
-    CarouselComponent
+    CarouselComponent,
+    SocialMediaButtonsComponent
   ],
   imports: [
     BrowserModule,
+    SharethisAngularModule,
     AppRoutingModule,
+    //font-awesome
+    FontAwesomeModule,
     FormsModule,
     //for ngx-bootstrap carousel
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    
   ],
   providers: [
-    //carousel behavioural config
-    // { 
-    //   provide: CarouselConfig, useValue: { 
-    //                                         interval: 5000, 
-    //                                         noPause: false, 
-    //                                         showIndicators: true 
-    //                                       } 
-    // },
     provideClientHydration(), {
       provide: LocationStrategy,
       useClass: PathLocationStrategy,
@@ -46,4 +50,9 @@ import { FormsModule } from '@angular/forms';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    //for Font-Awesome to be accessible globally
+    constructor(library: FaIconLibrary) {
+      library.addIconPacks(fas, far);
+    }
+ }

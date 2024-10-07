@@ -1,5 +1,17 @@
 @use '../abstracts' as *;
 
+.page-content {
+    color: grey;
+    .content-item-title {
+        font-weight: bold;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .content-item-paragraph {
+        padding: 10px 0;
+    }
+}
 
 
 

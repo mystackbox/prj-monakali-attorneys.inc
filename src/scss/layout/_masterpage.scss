@@ -9,7 +9,7 @@
     max-width: 900px;
 
     display: grid;
-    gap: 2px;
+    gap: 3px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr auto 1fr ;
     grid-template-areas:"navbar"
@@ -46,22 +46,33 @@
 .page-content-container {
     grid-area: main; 
     display: grid;
-    gap: 2px;
+    gap: 3px;
     grid-template-rows:1fr;
-    grid-template-areas: 
-                        "page-content-main"
-                        "page-content-sidebar";
+    grid-template-areas: "page-content-sidebar"
+                         "page-content-main";
 
-        /* Carousel Grid Area */
+        /* page-content-main Grid Area */
         .page-content-main {
             background-color: #fff;
             grid-area: page-content-main;
+            display: flex;
+            flex-direction: column;
+
+            //page-title
+            .page-title {
+            padding-bottom: 12px;
+            font-size: 18px;
+            text-transform: uppercase;
+            }
+            //page-content
+            // .page-content {
+                
+            // }
         }
 
         /* Sidebar Grid Area */
         .sidebar-container {
             grid-area: page-content-sidebar; 
-
         }
 }
  
@@ -75,7 +86,7 @@
     text-align: center;
     color: grey;
     background-color: #f8f9fa;
-    padding: 15px;
+    padding: 10px;
 }
 
 
@@ -100,8 +111,8 @@
      } 
 
      .page-content-container { 
-        grid-template-columns: 3fr 1fr;
-        grid-template-areas:"page-content-main page-content-sidebar";
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:"page-content-sidebar page-content-main";
     }
 
     .signature .social-buttons {

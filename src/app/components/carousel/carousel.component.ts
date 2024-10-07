@@ -9,7 +9,8 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
       { provide: CarouselConfig, useValue: { 
         interval: 5000, 
         noPause: false, 
-        showIndicators: true 
+        showIndicators: true,
+        isAnimated: true
       } 
     }
  ],

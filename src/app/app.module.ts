@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +47,7 @@ import { SocialMediaButtonsComponent } from './components/social-media-buttons/s
       provide: LocationStrategy,
       useClass: PathLocationStrategy,
     },
+    Title
   ],
   bootstrap: [AppComponent]
 })

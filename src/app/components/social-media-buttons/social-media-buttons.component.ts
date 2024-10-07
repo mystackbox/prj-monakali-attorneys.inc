@@ -5,20 +5,20 @@ import { StickyShareButtonsConfig } from 'sharethis-angular';
 //Inline Share Buttons
 const inlineShareButtonsConfig: InlineShareButtonsConfig = {
   alignment: 'center', // alignment of buttons (left, center, right)
-  color: 'white', // set the color of buttons (social, white)
+  color: 'social', // set the color of buttons (social, white)
   enabled: true, // show/hide buttons (true, false)
   font_size: 16, // font size for the buttons
   labels: null, // button labels (cta, counts, null)
   language: 'en', // which language to use (see LANGUAGES)
   networks: [
     // which networks to include (see SHARING NETWORKS)
-    //'whatsapp',
+    'whatsapp',
     'linkedin',
     // 'messenger',
     'facebook',
     // 'twitter',
     'email',
-    'print'
+    //'print'
   ],
   padding: 12, // padding within buttons (INTEGER)
   radius: 4, // the corner radius on each button (INTEGER)

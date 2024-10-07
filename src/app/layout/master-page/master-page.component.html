@@ -17,7 +17,12 @@
     <section class="page-content-container">
         
         <section class="page-content-main grid-area-common">
-            <router-outlet></router-outlet>
+            <div  class="page-title"> 
+                {{title}}
+            </div>
+            <div class="page-content"> 
+                <router-outlet></router-outlet>
+            </div>            
         </section>
 
         <section class="sidebar-container grid-area-common">
@@ -32,14 +37,13 @@
 
     <div class="signature"> 
         <div>
-            &copy; 2024 - All rights reserved | Copyright  Monakali Attoneys .Inc | Developed by Yingisani
+            &copy; {{year}} - All rights reserved | Copyright  Monakali Attoneys .Inc | Developed by Yingisani
         </div>
-        <br/>
-        
-         <!-- <app-ngx-share-buttons></app-ngx-share-buttons> -->
+        &nbsp;
       <div class="social-buttons">
+        
         <app-social-media-buttons></app-social-media-buttons>
-    </div>
+      </div>
 
     </div>
 

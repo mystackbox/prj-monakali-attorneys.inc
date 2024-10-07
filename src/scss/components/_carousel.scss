@@ -8,4 +8,19 @@
         display: block; 
         width: 100%;
     }
+
+    .action-btn {
+        border: 1px solid #fff;
+        padding: 2px 35px;
+        color: #fff;
+        margin-bottom: 8px;
+    }
 }
+
+/*   Medium screens, laptops  */
+@media screen and (max-width: 440px){
+
+    .action-btn-container {
+        display: none; 
+    }
+ }

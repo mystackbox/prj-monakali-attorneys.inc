@@ -1,8 +1,77 @@
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+<div id="contact-us-content">
+  <div class="content-form">
+    <form [formGroup]="_contactForm" class="contact-form" id="contact-form">
+      <div class="form-group">
+        <input type="text" formControlName="fullName" class="form-control form-control-sm form-control-textbox"
+          placeholder="* Full names" />
+
+        <!--
+              Custom validation
+              Multiple Validation Error messages  
+          -->
+        <div *ngIf="fullName?.touched && fullName?.invalid" class="form-validation-error-message">
+          <div *ngIf="fullName?.errors?.['required']">* Name required</div>
+          <div *ngIf="fullName?.errors?.['whiteSpace']">
+            * Name cannot contain whitespace
+          </div>
+
+          <div *ngIf="fullName?.errors?.['numeric']">
+            * Name cannot contain numeric values
+          </div>
+
+          <div *ngIf="fullName?.errors?.['specialCharacter']">
+            * Name cannot contain special chatacters
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" formControlName="emailAddress" class="form-control form-control-sm form-control-textbox"
+          placeholder="* Email address" />
+
+        <!--Multiple Validation Error messages -->
+        <div *ngIf="emailAddress?.touched && emailAddress?.invalid" class="form-validation-error-message">
+          <div *ngIf="emailAddress?.errors?.['required']">
+            * Email address required
+          </div>
+          <!-- <div *ngIf="name.errors?.['maxlength']"> First name should have a minimum of 5 characters </div> -->
+          <div *ngIf="emailAddress?.errors?.['email']">
+            * Email address format is incorrect
+          </div>
+
+          <div *ngIf="emailAddress?.errors?.['emailExist']">
+            * Email address alreay exist
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <textarea type="text" formControlName="message" id="message" rows="2" class="form-control form-control-sm"
+          placeholder="* Message"></textarea>
+
+        <!--Multiple Validation Error messages -->
+        <div *ngIf="message?.touched && message?.invalid" class="form-validation-error-message">
+          <div *ngIf="message?.errors?.['required']">* Message required</div>
+
+          <div *ngIf="message?.errors?.['whiteSpace']">
+            * Message cannot contain whitespace
+          </div>
+
+          <div *ngIf="message?.errors?.['minlength']">
+            * Message should have a minimum of
+            {{message?.errors?.['minlength'].requiredLength}}
+            characters
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="SUBMIT" (click)="sendMesssage()" class="btn btn-sm submit-button" />
+        <input type="reset" value="CLEAR" (click)="sendMesssage()" class="btn btn-sm clear-btn" />
+      </div>
+    </form>
+  </div>
+  <div class="content-map">
+    <app-maps></app-maps>
+  </div>
 </div>

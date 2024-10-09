@@ -1,26 +1,36 @@
-/* global font size */
+/* FONTS 
+-----------------------------------------
+*/
+
+/* Font size */
 $global-font-size: 14px;
 
-/* global font color */
+/* Font color */
 $global-font-color: rgba(0,0,0, 1);
 
-/* global border radius */
+/* LAYOUTS 
+-----------------------------------------
+*/
+/* Border radius */
 $global-border-radius: 6px;
 
-/* global Layouts gaps */
+/* Layouts gaps */
 $global-gap: 10px;
 
-/* global background color variables */
+/* Background color */
 $global-bg-color: rgba(245,245,245, 0.5);
 
-/* global form controls - textbox */
+/* FORMS 
+-----------------------------------------
+*
+/* textbox */
 $input-text-border: 1px solid rgba(245,245,245, 0.5);
 $input-text-font-size: 10px;
 $input-text-font-color: rgba(245,245,245, 0.5);
 
-/* global form controls - placeholder */
-$form-placeholder-size: 13px;
+/* placeholder */
+$form-placeholder-size: 11px;
 $form-placeholder-color: lightgrey;
 
-/* global form controls - error messages */
+/* error messages */
 $error-message-color: red;

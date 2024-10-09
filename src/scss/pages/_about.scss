@@ -1,7 +1,6 @@
 @use '../abstracts' as *;
 
-.page-content {
-    color: grey;
+.page-content #about-us-content {
     .content-item-title {
         font-weight: bold;
         padding: 0 0 10px 0;

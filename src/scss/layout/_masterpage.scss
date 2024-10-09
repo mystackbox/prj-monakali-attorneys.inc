@@ -58,19 +58,21 @@
             display: flex;
             flex-direction: column;
 
-            //page-title
+            //page-title section
             .page-title {
             padding-bottom: 12px;
             font-size: 18px;
             text-transform: uppercase;
+            margin-bottom: 5px;
             }
-            //page-content
-            // .page-content {
-                
-            // }
+
+            //page-content section
+            .page-content {
+                color: gray;
+            }
         }
 
-        /* Sidebar Grid Area */
+        // Sidebar Grid Area
         .sidebar-container {
             grid-area: page-content-sidebar; 
         }

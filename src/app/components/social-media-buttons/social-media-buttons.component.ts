@@ -41,9 +41,9 @@ const stickyShareButtonsConfig: StickyShareButtonsConfig = {
     //'messenger',
     'facebook',
     //'twitter',
-    //'whatsapp',
+    'whatsapp',
     'email',
-    'print'
+    //'print'
    
   ],
   padding: 12,          // padding within buttons (INTEGER)

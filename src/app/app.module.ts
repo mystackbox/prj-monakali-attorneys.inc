@@ -35,25 +35,34 @@ import { SocialMediaButtonsComponent } from './components/social-media-buttons/s
     BrowserModule,
     SharethisAngularModule,
     AppRoutingModule,
+
     //font-awesome
     FontAwesomeModule,
     FormsModule,
+
     //for ngx-bootstrap carousel
     CarouselModule.forRoot(),
-    
+
+
+
   ],
   providers: [
-    provideClientHydration(), {
+    provideClientHydration(),
+
+    //Url requests - structure
+    {
       provide: LocationStrategy,
       useClass: PathLocationStrategy,
     },
+
+    //Service for pageTitle
     Title
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-    //for Font-Awesome to be accessible globally
-    constructor(library: FaIconLibrary) {
-      library.addIconPacks(fas, far);
-    }
- }
+  //for Font-Awesome to be accessible globally
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+  }
+}

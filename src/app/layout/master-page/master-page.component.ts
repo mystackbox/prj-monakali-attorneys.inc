@@ -24,21 +24,8 @@ export class MasterPageComponent{
     this.router.events.subscribe((event: any) => {
       let newTitle =  this.titleService.getTitle(); 
       this.title =  newTitle.split('|')[1];
-      //this.title =  newTitle?.split('|').pop();
-
-      // if (event instanceof NavigationStart) {
-      //     Show loading indicator
-      //     console.log("On Starting :" + this.title);
-      // }
-
-      // if (event instanceof NavigationEnd) {
-      //     // Hide loading indicator
-      //     console.log("On Ending :" + this.title);
-      // }
-
+  
       if (event instanceof NavigationError) {
-          // Hide loading indicator
-          // Present error to user
           console.log(event.error);
       }
     });

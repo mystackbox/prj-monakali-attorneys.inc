@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+/* form */
+@mixin page-content-form {
+  /* form and its components */
+
+  .form-group {
+    margin-bottom: 10px;
+    
+    .form-control-sm {
+      font-size: 12px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-size: $form-placeholder-size;
+      color: $form-placeholder-color;
+    }
+
+    .form-validation-error-message {
+      color: $error-message-color;
+      font-size: 12px;
+    }
+
+    .btn {
+      margin-right: 10px;
+      border-radius: 0px;
+      font-size: $global-font-size - 4;
+      padding: 3px 16px 2px 16px;
+    }
+
+    .submit-button {
+      background-color: red;
+      color: #fff;
+
+      &:hover {
+        background-color: orange;
+      }
+    }
+
+    .clear-btn {
+      background-color: grey;
+      color: #fff;
+
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+}

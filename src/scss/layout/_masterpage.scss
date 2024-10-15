@@ -54,7 +54,7 @@
     border-bottom: 1px solid lightgrey;
     grid-area: main; 
     display: grid;
-    gap: 3px;
+    // gap: 3px;
     grid-template-rows:1fr;
     grid-template-areas: "page-content-sidebar"
                          "page-content-main";

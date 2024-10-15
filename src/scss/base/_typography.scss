@@ -1,8 +1,14 @@
 @use '../abstracts' as *;
 
 body {
+    background-image: url('../../assets/bg-img/4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 100;
     font-size: 13px;
     font-style: normal;
+
 }

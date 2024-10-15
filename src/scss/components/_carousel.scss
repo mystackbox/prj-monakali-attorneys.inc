@@ -1,4 +1,6 @@
 .carousel-container {
+    border-bottom: 1px solid lightgrey;
+    
     .responsive {
         width: 100%;
         height: auto;
@@ -7,6 +9,11 @@
     .carousel-img {
         display: block; 
         width: 100%;
+        
+    }
+
+    .carousel-title {
+        font-size: 28px;
     }
 
     .action-btn {
@@ -18,9 +25,16 @@
 }
 
 /*   Medium screens, laptops  */
-@media screen and (max-width: 440px){
+@media screen and (max-width: 500px){
+
+    .carousel-caption h4{
+        font-size: 18px;
+    }
 
     .action-btn-container {
         display: none; 
     }
+
+
  }
+ 

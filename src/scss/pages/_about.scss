@@ -3,9 +3,13 @@
 .page-content #about-us-content {
     .content-item-title {
         font-weight: bold;
-        padding: 0 0 10px 0;
+        padding: 0 0 7px 0;
         border-bottom: 1px solid lightgrey;
     }
+
+    .service-header-icon {
+        @include icon-styles;
+      }
 
     .content-item-paragraph {
         padding: 10px 0;

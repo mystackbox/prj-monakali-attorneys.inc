@@ -2,11 +2,12 @@
 @use '../abstracts' as *;
 
 .footer-wrapper {
-    padding-top: 5px;
+    // padding-top: 5px;
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
-
+    gap: 25px;
+    border-bottom: 1px solid lightgrey;
+ 
     .footer-item {
         font-size: 16px;
         color:grey;
@@ -29,17 +30,15 @@
             // border: 1px solid lightgrey;
             ul {
                 margin-top: 7px;
-                margin-left: -32px;
             }
             ul li {
                 list-style: none;   
-                font-size: 13px;          
+                font-size: 13px;   
+                margin-left: -32px;       
             }
         }
     }
 }
-
-
 
 /*   Medium screens, laptops  */
 @media screen and (max-width: 633px){
@@ -66,8 +65,28 @@
  /*   Medium screens, laptops  */
 @media screen and (max-width: 540px){
     .footer-wrapper {
-        flex-direction: column;
+
+        // flex-direction: column;
         .footer-item-1, .footer-item-2 {
+            display: none;
+        }
+
+        .footer-item-3 {
+            order: 2;
+        }
+
+        .footer-item-4 {
+            order: 1;
+        }
+        
+    }
+}
+
+ /*   Medium screens, laptops  */
+ @media screen and (max-width: 450px){
+    .footer-wrapper {
+        flex-direction: column;
+        .footer-item-1, .footer-item-2, .footer-item-3 {
             display: none;
         }
 

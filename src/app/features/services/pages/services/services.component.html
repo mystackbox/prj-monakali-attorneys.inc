@@ -1,9 +1,18 @@
-<p>In Cascading Style Sheets, CSS grid layout or CSS grid creates complex responsive web design grid layouts more 
-    asily and consistently across browsers. 
-    <div class="list-group list-group-flush">
-        <a routerLink="/" class="list-group-item ">First service</a>
-        <a routerLink="/" class="list-group-item">Second services</a>
-        <a routerLink="/" class="list-group-item">Third services</a>
-        <a routerLink="/" class="list-group-item">Foutrh services</a>
-      </div>
-      <br/>
+<div  id="our-services-content">
+  
+  <div *ngFor="let listItem of servicesItems" class="services-card">
+    <div class="service-header">
+      <fa-icon class="service-header-icon" [icon]="['fas', 'scale-unbalanced-flip']"></fa-icon>
+       {{listItem.title}}
+    </div>
+    <div [innerHTML]="listItem.list" class="service-content">
+    </div>
+  </div>
+</div>
+
+<div class="services-content-paragraph">
+  <p>
+    For futher assistance, please contact us and we will take you through our processes:
+  </p>
+  <button type="submit"  class="btn btn-sm submit-button " ><fa-icon [icon]="['fas', 'phone']"></fa-icon>  (+27)71 913-2174 </button>
+</div>

@@ -24,9 +24,9 @@
 
     .btn {
       margin-right: 10px;
-      border-radius: 0px;
       font-size: $global-font-size - 4;
       padding: 3px 16px 2px 16px;
+      border-radius: 5px;
     }
 
     .submit-button {
@@ -47,4 +47,9 @@
       }
     }
   }
+}
+
+@mixin icon-styles {
+  color: $icon-color;
+  margin-right: 5px;
 }

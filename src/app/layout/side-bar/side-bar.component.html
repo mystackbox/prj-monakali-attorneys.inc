@@ -1,19 +1,44 @@
 
 
 <div class="side-bar-wrapper">
-  <div class="list-group list-group-flush side-bar-item">
+  <div class="list-group side-bar-item">
     <a routerLink="/" class="list-group-item bg-body-secondary">
-      <fa-icon [icon]="['fas', 'scale-balanced']"></fa-icon> OUR SERVICES</a>
+      <fa-icon class="card-icon" [icon]="['fas', 'temperature-high']"></fa-icon>
+      TODAY'S WEATHER</a>
+    <a routerLink="/" class="list-group-item">
+      <!-- <fa-icon class="card-icon" [icon]="['fas', 'temperature-high']"></fa-icon>  -->
+      Temp: 23 &deg;C 
+      <!-- | <fa-icon class="card-icon" [icon]="['fas', 'droplet']"></fa-icon>  -->
+      | Rain: 0.2 mm 
+    </a>
+  </div>
+  <div class="list-group side-bar-item">
+    <a routerLink="/" class="list-group-item bg-body-secondary">
+      <fa-icon class="card-icon" [icon]="['fas', 'gavel']"></fa-icon>
+      OUR SERVICES</a>
     <a routerLink="/" class="list-group-item">RAF Claims</a>
-    <a routerLink="/" class="list-group-item">Family Law</a>
-    <a routerLink="/" class="list-group-item">Labour Law</a>
   </div>
 
-  <div class="list-group list-group-flush side-bar-item">
+  <div class="list-group side-bar-item">
     <a routerLink="/" class="list-group-item bg-body-secondary">
-      <fa-icon [icon]="['fas', 'square-phone']"></fa-icon> COTANT DETAILS</a>
-    <a routerLink="/" class="list-group-item">(+27)71 913-2174</a>
-    <a routerLink="/" class="list-group-item">info&#64;monakaliattorneys.co.za</a>
+      <fa-icon class="card-icon" [icon]="['fas', 'phone']"></fa-icon>
+       COTANT DETAILS</a>
+    <a routerLink="/" class="list-group-item">
+      <!-- <fa-icon class="card-icon" [icon]="['fas', 'phone']"></fa-icon>  -->
+      (+27)71 913-2174
+    </a>
+    <a routerLink="/" class="list-group-item">
+      <!-- <fa-icon class="card-icon" [icon]="['fas', 'envelope']"></fa-icon> -->
+      info&#64;monakaliattorneys.co.za
+    </a>
+  
+  </div>
+
+  <div class="list-group side-bar-item">
+    <a routerLink="/" class="list-group-item bg-body-secondary">
+      <fa-icon class="card-icon" [icon]="['fas', 'share-nodes']"></fa-icon>
+       SOCIAL MEDIA
+    </a>
     <a routerLink="/" class="list-group-item">
        <!-- <app-ngx-share-buttons></app-ngx-share-buttons> -->
        <div class="social-buttons-aligner">

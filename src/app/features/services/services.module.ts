@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ServicesRoutingModule } from './services-routing.module';
 import { ServicesComponent } from './pages/services/services.component';
+import { ContentListService } from '../../shared/services/our-services-content/content-list.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -11,7 +13,11 @@ import { ServicesComponent } from './pages/services/services.component';
   ],
   imports: [
     CommonModule,
-    ServicesRoutingModule
+    ServicesRoutingModule,
+    FontAwesomeModule
+  ],
+  providers: [
+    ContentListService
   ]
 })
 export class ServicesModule { }

@@ -1,1 +1,152 @@
 @use '../abstracts' as *;
+
+#home-content {
+    // border: 1px solid red;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+    grid-template-areas:"cards-container" 
+                        "paragraph-container";
+
+    /* cards Grid Area */
+    .cards-section {
+        grid-area: cards-container;
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        align-content: space-evenly;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 10px;
+        /* Large-img Grid Area */
+        .cards-container {
+            text-align: center;
+            padding: 15px;
+            
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            background-color: #f8f9fa;
+
+            .card-image {
+                //for overlay effect
+                position: relative;
+                object-fit: contain;
+
+                .overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(0,0,0, 0.5);
+                    overflow: hidden;
+                    width: 100%;
+
+                    height: 0;
+                    transition: .7s ease;
+                }
+            
+                .overlay-text {
+                    color: white;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            
+                &:hover .overlay {
+                    cursor: pointer;
+                    height: 100%;                        
+                }
+            }
+            
+            img {
+                max-height: 110px;
+                max-width: 100%;
+            }
+
+            .card-header {
+                font-weight: bold;
+            }
+
+            .card-button {
+                border: 1px solid lightgrey;
+                border-radius: 0;
+                color: grey;
+                font-size: 12px;
+                &:hover {
+                    // border: none;
+                    background-color: olivedrab;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+
+    /* Paragraph Grid Area */
+    .paragraph-section {
+        grid-area: paragraph-container;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+
+        .paragraph-header {
+            font-weight: bold;
+        }
+
+        .btn-container {
+            margin-top: 5px;
+            .contact-button {
+                background-color: olivedrab;
+                color: #fff;
+            }
+        }
+
+    }
+
+  
+
+}
+
+/*   Medium screens, laptops  */
+@media screen and (min-width: 451px){
+    #home-content {
+        .cards-section {
+            #card-right {
+                display: none;
+            } 
+        }
+    } 
+ }
+
+/*   Medium screens, laptops  */
+@media screen and (max-width: 450px){
+    #home-content {
+        display: flex;
+        flex-direction: column;
+
+        .cards-section {
+            order: 2;
+            gap: 15px;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        .paragraph-section {
+            order: 1;
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: 15px;
+            text-align: center;
+
+        }
+    } 
+ }
+
+ 
+
+

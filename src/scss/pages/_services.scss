@@ -1,1 +1,53 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
+
+.page-content  #our-services-content {
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // row-gap: 10px;
+
+    .services-card {
+    //   border: 1px solid lightgrey;
+      width: 295px;
+
+      .service-header {
+        border-bottom: 1px solid lightgrey;
+        padding: 5px 0 5px 0;
+        font-weight: bold;
+      }
+
+      .service-header-icon {
+        @include icon-styles;
+      }
+
+      .service-content {
+        padding-top: 5px;
+      }
+    }
+}
+
+.services-content-paragraph {
+    text-align: left;
+    padding-top: 5px;
+
+    .btn {
+      margin-right: 10px;
+      border-radius: 0px;
+      font-size: $global-font-size - 4;
+      padding: 5px 16px 4px 16px;
+    }
+
+    .submit-button {
+      background-color: brown;
+      border-radius: 5px;
+      color: #fff;
+
+      &:hover {
+        background-color: red;
+      }
+    }
+
+  }

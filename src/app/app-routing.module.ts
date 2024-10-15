@@ -7,7 +7,7 @@ import { HomeModule } from './features/home/home.module';
 import { MasterPageComponent } from './layout/master-page/master-page.component';
 import { ServicesModule } from './features/services/services.module';
 import { TeamModule } from './features/team/team.module';
-import { pageTitle } from './shared/pageTitle';
+import { pageTitle } from './shared/services/page-title/pageTitle';
 
 const routes: Routes = [
    { path: '',   redirectTo: '/home', pathMatch: 'full' },

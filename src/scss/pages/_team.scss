@@ -1,6 +1,5 @@
 @use '../abstracts' as *;
-
-.page-content #about-us-content {
+.page-content #team-content {
     .content-item-title {
         font-weight: bold;
         padding: 0 0 7px 0;
@@ -13,8 +12,17 @@
 
     .content-item-paragraph {
         padding: 10px 0;
+        ul {
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .personal-names {
+            font-weight: bold;
+        }
+
+        .support-team-list {
+            margin-top: 0px; 
+        }
     }
 }
-
-
-

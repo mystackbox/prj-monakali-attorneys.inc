@@ -3,3 +3,7 @@
 .side-bar-item {
     margin-bottom: 10px;
 }
+
+.service-header-icon {
+    @include icon-styles;
+  }

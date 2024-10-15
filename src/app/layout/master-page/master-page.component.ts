@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NavigationEnd, NavigationError, NavigationStart, Router, TitleStrategy } from '@angular/router';
-import { pageTitle } from '../../shared/pageTitle';
+import {NavigationError, Router, TitleStrategy } from '@angular/router';
+import { pageTitle } from '../../shared/services/page-title/pageTitle';
 import { Title } from '@angular/platform-browser';
 
 @Component({

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ContentListService } from '../../../../shared/services/our-services-content/content-list.service';
-import { json } from 'stream/consumers';
 
 @Component({
   selector: 'app-services',
@@ -20,7 +19,6 @@ export class ServicesComponent {
 
   getServicesList(){
     this.servicesItems = this.serviceList.getContentList();
-    console.log(this.servicesItems)
   }
 
 }

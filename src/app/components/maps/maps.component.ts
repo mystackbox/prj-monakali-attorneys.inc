@@ -41,7 +41,7 @@ export class MapsComponent implements OnInit {
   addMarker() {
 
     const icon = {
-      url: "../assets/map-icon/map7.png", // url
+      url: "../map-icon/map7.png", // url
       scaledSize: new google.maps.Size(35, 30), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0), // anchor   
@@ -58,7 +58,7 @@ export class MapsComponent implements OnInit {
         color: 'darkgreen',
         fontWeight: 'bold',
         fontSize : '15px',
-        text: 'MK Attorneys .Inc',
+        text: 'K Monakali',
       },
     
       title: 'Monakali Attorneys .Inc' ,

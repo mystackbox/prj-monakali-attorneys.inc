@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, TitleStrategy } from '@angular/router';
+
 import { NotFoundComponent } from './features/not-found/pages/not-found/not-found.component';
 import { AboutModule } from './features/about/about.module';
 import { ContactModule } from './features/contact/contact.module';
@@ -57,15 +58,14 @@ const routes: Routes = [
     ]
   }
   ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
-  exports: [RouterModule],
-  providers: [
-    {
-      provide: TitleStrategy,
-      useClass: pageTitle
-    }
-  ]
-})
+  @NgModule({
+    imports: [RouterModule.forRoot(routes, {useHash: true})],
+    exports: [RouterModule],
+    providers: [
+      {
+        provide: TitleStrategy,
+        useClass: pageTitle
+      }
+    ]
+  })
 export class AppRoutingModule { }

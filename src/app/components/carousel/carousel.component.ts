@@ -18,16 +18,20 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
 export class CarouselComponent {
 
   slides = [
-    {image: 'assets/carousel-img/5.jpg', title: 'We are a Law firm', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-    {image: 'assets/carousel-img/2.jpg', title: 'Reliable Services' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-    {image: 'assets/carousel-img/6.jpg', title: 'Quality Legal Services' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-    {image: 'assets/carousel-img/1.jpg', title: 'Contact us today' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+    {image: 'carousel-img/5.jpg', title: 'We are a Law firm', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+    {image: 'carousel-img/2.jpg', title: 'Reliable Services' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+    {image: 'carousel-img/6.jpg', title: 'Quality Legal Services' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+    {image: 'carousel-img/1.jpg', title: 'Contact us today' , description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
  ];
+  
  noWrapSlides = false;
  showIndicator = true;
- constructor() { }
+ constructor() { 
+
+ }
 
  ngOnInit(): void {
+  this.slides;
  }
 
 }

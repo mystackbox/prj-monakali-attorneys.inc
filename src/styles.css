@@ -31,9 +31,10 @@
 /* include all _partials from the following directories: */
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-image: url("../../assets/bg-img/4.jpg");
+  background-image: url("../../../public/bg-img/4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 13px;
@@ -44,16 +45,35 @@ body {
 /* You can add global styles to this file, and also import other style files */
 /*  Site header */
 .header-container {
-  display: flexbox;
-  flex-direction: row;
   border-bottom: 1px solid lightgrey;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 43px;
+  z-index: 9;
 }
-.header-container .sitename-first-row {
+.header-container header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  grid-template-areas: "site-logo site-names";
+}
+.header-container header .site-logo {
+  grid-area: site-logo;
+}
+.header-container header .site-logo img {
+  height: 55px;
+}
+.header-container header .sitenames {
+  grid-area: site-names;
+  display: flex;
+  flex-direction: column;
+}
+.header-container header .sitenames .sitename-first-row {
   font-weight: bold;
   font-size: 24px;
-  color: brown;
+  color: grey;
 }
-.header-container .sitename-second-row {
+.header-container header .sitenames .sitename-second-row {
   font-size: 16px;
   letter-spacing: 2px;
 }
@@ -127,10 +147,6 @@ body {
 /* Header Grid Area */
 .header-container {
   grid-area: header;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 47px;
-  z-index: 9;
 }
 
 /* Carousel Grid Area */
@@ -143,7 +159,6 @@ body {
   border-bottom: 1px solid lightgrey;
   grid-area: main;
   display: grid;
-  gap: 3px;
   grid-template-rows: 1fr;
   grid-template-areas: "page-content-sidebar" "page-content-main";
   /* page-content-main Grid Area */
@@ -208,7 +223,7 @@ body {
 }
 
 .service-header-icon {
-  color: brown;
+  color: grey;
   margin-right: 5px;
 }
 
@@ -482,7 +497,7 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 .page-content #about-us-content .service-header-icon {
-  color: brown;
+  color: grey;
   margin-right: 5px;
 }
 .page-content #about-us-content .content-item-paragraph {
@@ -506,7 +521,7 @@ body {
   font-weight: bold;
 }
 .page-content #our-services-content .services-card .service-header-icon {
-  color: brown;
+  color: grey;
   margin-right: 5px;
 }
 .page-content #our-services-content .services-card .service-content {
@@ -530,6 +545,31 @@ body {
 }
 .services-content-paragraph .submit-button:hover {
   background-color: red;
+}
+
+/* include all _partials from the following directories: */
+/* You can add global styles to this file, and also import other style files */
+.page-content #team-content .content-item-title {
+  font-weight: bold;
+  padding: 0 0 7px 0;
+  border-bottom: 1px solid lightgrey;
+}
+.page-content #team-content .service-header-icon {
+  color: grey;
+  margin-right: 5px;
+}
+.page-content #team-content .content-item-paragraph {
+  padding: 10px 0;
+}
+.page-content #team-content .content-item-paragraph ul {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.page-content #team-content .content-item-paragraph .personal-names {
+  font-weight: bold;
+}
+.page-content #team-content .content-item-paragraph .support-team-list {
+  margin-top: 0px;
 }
 
 /* include all _partials from the following directories: */

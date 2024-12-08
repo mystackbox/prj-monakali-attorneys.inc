@@ -12,7 +12,7 @@
 
 # Introduction
 
-Mobile-friendly `Angular 2+` websites developed using lazy-loading approach to enhance site-performance. CSS Grid-layout and Flexbox models were used to design responsive UI. 
+Mobile-friendly `Angular 2+` website developed using lazy-loading approach to enhance site-performance. CSS Grid-layout and Flexbox models were used to design responsive UI. 
 
 [Back to top](#table-of-contents)
 

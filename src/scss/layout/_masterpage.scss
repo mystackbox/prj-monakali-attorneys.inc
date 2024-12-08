@@ -72,6 +72,7 @@
             font-size: 18px;
             text-transform: uppercase;
             margin-bottom: 5px;
+            text-align: center;
             }
 
             //page-content section
@@ -101,7 +102,6 @@
 }
 
 
-/*   Medium screens, laptops  */
 @media screen and (max-width: 766px){
 
     .sidebar-container {
@@ -109,7 +109,6 @@
     }
  }
 
-/*   Medium screens, laptops  */
 @media screen and (min-width: 768px){
     
     /*  Large screens - Grid Layout areas */

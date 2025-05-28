@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/contact",
+    "/home",
+    "/page-not-found",
+    "/services",
+    "/team"
+  ]
+}
